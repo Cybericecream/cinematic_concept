@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  proxy:
+    container_name: cinematic_concept
+    volumes:
+      - ./docker/devlopment/config/nginx.conf:/etc/nginx/conf.d/cinematic_concept.conf:ro
+      - .:/var/www/cinematic_concept
+    image: nginx:1.21
+    ports:
+      - "8080:80"
+    environment:
+      - NGINX_PORT=80
