@@ -1,5 +1,10 @@
 html {
   height: 100vh;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h4, p {
+  color: white;
 }
 
 body {
@@ -9,9 +14,49 @@ body {
 
 canvas {
   position: fixed;
+  z-index: -1;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   max-width: 100vw;
   max-height: 100vh;
+}
+
+.wrapper {
+  width: 100vw;
+}
+
+.wrapper .insert {
+  width: 100vw;
+  max-width: 2100px;
+}
+
+.insert .padder {
+  width: 100%;
+  height: calc((100vh - 770px)/2);
+}
+
+.insert section {
+  width: 100%;
+  height: 100vh;
+}
+.insert .snapSection {
+  width: 1158px;
+  padding: calc((100vh - 770px)/2) 0;
+  position: sticky;
+  top: 0;
+}
+.snapSection h2 {
+  margin-left: 15px;
+}
+
+
+/** Col **/
+.col1 {
+  width: 100%;
+}
+
+.col2 {
+  width: 50%;
+  float: left;
 }
